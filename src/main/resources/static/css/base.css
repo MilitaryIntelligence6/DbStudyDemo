@@ -1,0 +1,172 @@
+/*      准备工作开始      */
+* {
+    margin: 0;
+    padding: 0;
+}
+ul {
+    list-style: none;
+}
+/*  清除浮动    */
+.clearfix:before, .clearfix:after {
+    /*display: auto;*/
+    content: "";
+}
+.clearfix:after {
+    clear: both;
+}
+.clearfix {
+    *zoom: 1;
+}
+.container {        /*版心居中对齐*/
+    width: 1380px;
+    margin: 0 auto;
+}
+/*      准备工作结束      */
+
+body{
+    margin: 0;
+    padding: 0;
+    background-image: url("../../static/images/main.jpg");
+    /*background-image: linear-gradient(45deg,#194568,#a5def1);*/
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: 100%;
+}
+/*      头部制作部分开始        */
+header{
+    height: 100px;
+    border-radius: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+/*   顶部    */
+.top{
+    height: 64px;
+    background: rgba(0, 0, 0, 0);
+}
+/*      导航栏开始       */
+.navitems{
+    height: 36px;
+    line-height: 36px;
+    border-top: 1px solid gray;
+    border-bottom: 2px solid #000000;
+    background-color: #1e3932;
+    /*background-color: #1b315e;*/
+    border-radius: 14px;
+}
+.navitems a{
+    text-decoration: none;
+    font-size: 14px;
+    font-width: 700;
+    /*font-weight: bolder;*/
+    color: #ffffff;
+    display: inline-block;
+    width: 80px;
+    height: 36px;
+    text-align: center;
+    border-radius: 10px;
+}
+.navitems ul{
+    list-style: none;
+    padding-left: 300px;
+    margin: 0 auto;
+}
+.navitems li{
+    float: left;
+}
+.navitems a:hover{        /*鼠标经过时显示图片*/
+    /*background: url("#") no-repeat;     !*为链接添加背景图片*!*/
+    background-color: cadetblue;
+}
+.space{      /*用于分隔导航栏的小竖线*/
+    width: 1px;
+    height: 15px;
+    background-color: grey;
+    margin: 10px 10px 0;
+}
+/*      导航栏结束     */
+/*      头部制作部分结束        */
+
+/*      主体部分开始      */
+.main {
+    height: 655px;
+    width: 1455px;
+    /*background-color: #d4e9e2;*/
+    display: inline-block;
+}
+.main ul {
+    list-style: none;
+    margin: 0px auto;
+}
+
+/*      主体侧边栏开始     */
+.slidebar {
+    margin-left: 40px;
+    height: 610px;
+    width: 160px;
+    background: rgba(224 ,238 ,238,0.6);
+    border-right: 1px solid #ffffff;
+    /*border-left: 1px solid #ffffff;*/
+    border-radius: 10px;
+    padding: 10px;
+    float: left;
+}
+.slidebar li a{
+    text-decoration: none;
+    font-weight: bolder;
+    position: relative;
+    overflow: hidden;
+    transition: 0.7s all;
+    font-size: 14px;
+    font-width: 700;
+    color: #1e3932;
+    display: block;
+    line-height: 40px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    padding: 0 20px;
+}
+.slidebar ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.slidebar li{
+    display: block;
+}
+.slidebar a span {
+    float: right;
+}
+.slidebar a:before {            /*鼠标经过时*/
+    content: "";
+    width: 100px;
+    position: absolute;
+    border-bottom: 4px solid #313131;
+    bottom: 0;
+    right: 350px;
+    transition: 0.5s all;
+}
+.slidebar a:hover:before{        /*鼠标经过时线条滑动*/
+    right: 0;
+    background-color: cadetblue;
+}
+.slidebar a:hover {            /* 鼠标经过时背景色变为白色*/
+    background-color: white;
+}
+/*      主体侧边栏结束     */
+.right{
+    position: relative;
+    margin-left: 225px;
+    margin-top: 10px;
+    height: 610px;
+    /*width: 1190px;*/
+    background: rgba(245, 245, 245, 0.1);
+    border-radius: 16px;
+    padding: 10px;
+    margin-right: 30px;
+}
+/*.swufe {*/
+/*width: 1455px;*/
+/*}*/
+
+/*      主体部分结束      */

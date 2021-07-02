@@ -1,0 +1,110 @@
+/*      上半部分开始      */
+.upperHalf{
+    height: 50%;
+    /*background: rgba(245, 245, 245, 0);*/
+    padding-top: 15px;
+    padding-left: 15px;
+}
+.upperHalf ul{
+    list-style: none;
+    margin: 0 auto;
+}
+.box{         /* 功能区 */
+    float: left;
+    width: 30%;
+    margin: 10px;
+}
+.upperHalf h4{
+    line-height: 30px;
+    text-align: center;
+    text-decoration: none;
+    background: rgba(255 ,255 ,255, 1);
+    border-radius: 10px;
+    color: #1e3932;
+}
+.upperHalf form{       /*  表单  */
+    padding: 10px;
+    color: #1e3932;
+}
+.upperHalf span{
+    width: 100px;
+    float: left;
+    text-align: right;
+    padding-right: 10px;
+}
+.textBox{
+    /*display: block;*/
+    box-sizing: border-box;
+    width: 200px;
+    height: 20px;
+    /*background-color: white;*/
+    background: rgba(255, 255, 255, 0.6);
+    border: 1px solid white;
+    color: #1e3932;
+    /*outline: none;*/
+    margin: 5px 0;
+    border-radius: 6px;
+}
+.buttons {
+    width: 140px;
+    line-height: 30px;
+    /*background-color: #2c3e50;*/
+    background-color: #274d3d;
+    border: 0;
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-right: 30px;
+    text-align: center;
+    text-decoration: none;
+    float: right;
+}
+
+.line{      /*用于分隔功能区的小竖线*/
+    width: 1px;
+    height: 240px;
+    /*background-color: gray;*/
+    border-left: 1px dotted gray;
+    margin-top: 20px;
+    /*margin: 10px 0px 0;*/
+    float: left;
+}
+/*      上半部分结束      */
+
+/*      下半部分开始      */
+.lowerHalf{
+    height: 48%;
+    background: rgba(255 ,255 ,255, 0);
+    border-top: 2px dotted #ffffff;
+    text-align: center;
+    border-radius: 10px;
+}
+.lowerHalf h4{
+    max-width: 340px;
+    line-height: 30px;
+    text-align: center;
+    margin: auto;
+    margin-bottom: 20px;
+    text-decoration: none;
+    background-color: #ffffff;
+    border-radius: 10px;
+    color: #1e3932;
+}
+/*      表格部分    */
+.lowerHalf table{
+    text-align: center;
+    margin: auto;
+    border: 1px solid gray;
+    border-collapse: collapse;
+    color: #1e3932;
+}
+.lowerHalf td,th{
+    border: 1px solid gray;
+    height: 30px;
+    padding-left: 8px;
+    padding-right: 8px;
+}
+.lowerHalf th{
+    font-size: 14px;
+}
+/*      下半部分结束      */

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Test</title>
+</head>
+<body>
+<table  border='1' cellspacing='0'>
+    <tr>
+        <td>id</td>
+        <td>username</td>
+        <td>password</td>
+    </tr>
+    <input type="submit" value="submit"/><br/>
+    <tr th:each="user:${users}">
+        <td th:text="${user.id}">1</td>
+        <td th:text="${user.username}">2</td>
+        <td th:text="${user.password}">3</td>
+    </tr>
+</table>
+<div>
+    <form action="/user/insertUser" method="get">
+        id: <input type="text" name="id"/><br/>
+        username: <input type="text" name="username"/><br/>
+        password: <input type="text" name="password"/><br/>
+        <input type="submit" value="添加"/>
+    </form>
+</div>
+</body>
+</html>

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>辅助管理</title>
+    <!--    访客信息    -->
+    <link href="../static/css/base.css" type="text/css" rel="stylesheet" />
+    <link href="../static/css/mainBody.css" type="text/css" rel="stylesheet" />
+</head>
+<body>
+<!--  头部  -->
+<header>
+    <!--    顶部      -->
+    <div class="top">
+        <a href="#"><img src="#" alt=""/></a>
+    </div>
+    <!--    顶部导航栏   -->
+    <div class="navitems container">
+        <ul>
+            <li>
+                <a href="/">主页</a>
+            </li>
+            <li class="space"></li>
+            <li>
+                <a href="/zone/all">宿舍信息</a>
+            </li>
+            <li class="space"></li>
+            <li>
+                <a href="/student/all">用户管理</a>
+            </li>
+            <li class="space"></li>
+            <li>
+                <a href="changeDorm.html">学生转宿</a>
+            </li>
+            <li class="space"></li>
+            <li>
+                <a href="studentPay.html">学生缴费</a>
+            </li>
+            <li class="space"></li>
+            <li>
+                <a href="rent.html">宿舍出租</a>
+            </li>
+            <li class="space"></li>
+            <li>
+                <a href="/visitor/all">辅助管理</a>
+            </li>
+            <li class="space"></li>
+            <li>
+                <a href="/login">登录</a>
+            </li>
+        </ul>
+    </div>
+</header>
+<div class="main">
+    <ul>
+        <li class="slidebar">
+            <div>
+                <ul>
+                    <li>
+                        <a href="visitor.html">访客记录<span> > </span></a>
+                    </li>
+                    <li>
+                        <a href="discipline.html">学生违纪记录<span> > </span></a>
+                    </li>
+                    <li>
+                        <a href="baggage.html">大件物品记录<span> > </span></a>
+                    </li>
+                    <li>
+                    <a href="electricApplication.html">学生电器登记表<span> > </span></a>
+                    </li>
+                    <li>
+                        <a href="stay.html">学生留宿记录<span> > </span></a>
+                    </li>
+                </ul>
+            </div>
+        </li>
+        <!--    图表操作部分    -->
+        <li class="right">
+            <div class="upperHalf">
+                <ul>
+                    <li class="box">
+                        <!--查询留宿记录-->
+                        <h4>查询留宿记录</h4>
+                        <form action="/stay/one" method="get">
+                            <span>学号: </span><input class="textBox" type="text" name="sno"><br/>
+                            <input class="buttons" type="submit" value="查询">
+                        </form>
+                    </li>
+                    <li class="line"></li>
+                    <li class="box">
+                        <!--插入一条留宿记录-->
+                        <h4>插入留宿记录</h4>
+                        <form action="/stay/insert" method="get">
+                            <span>学号: </span><input class="textBox" type="text" name="sno"/><br/>
+                            <span>留宿时间: </span><input class="textBox" type="text" name="ftime"/><br/>
+                            <span>离开时间: </span><input class="textBox" type="text" name="ttime"/><br/>
+                            <span>是否同意出租: </span><input class="textBox" type="text" name="aggrement"/><br/>
+                            <input class="buttons" type="submit" value="添加"/>
+                        </form>
+                    </li>
+                    <li class="box">
+                        <!--插入一条留宿记录-->
+                        <h4>插入留宿记录</h4>
+                        <form action="/stay/delete" method="get">
+                            <span>学号: </span><input class="textBox" type="text" name="sno"/><br/>
+                            <input class="buttons" type="submit" value="删除"/>
+                        </form>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="lowerHalf">
+                <!--展示留宿列表-->
+                <h4>学生留宿表</h4>
+                <table>
+                    <tr>
+                        <th>学号</th>
+                        <th>留宿时间</th>
+                        <th>离开时间</th>
+                        <th>是否同意出租</th>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </table>
+            </div>
+        </li>
+    </ul>
+</div>
+</body>
+</html>

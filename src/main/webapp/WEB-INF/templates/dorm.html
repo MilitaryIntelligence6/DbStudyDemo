@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>宿舍信息</title>
+    <!--    寝室信息    -->
+    <link href="../static/css/base.css" type="text/css" rel="stylesheet" />
+    <link href="../static/css/mainBody.css" type="text/css" rel="stylesheet" />
+</head>
+<body>
+<!--  头部  -->
+<header>
+    <!--    顶部      -->
+    <div class="top">
+        <a href="#"><img src="#" alt=""/></a>
+    </div>
+    <!--    顶部导航栏   -->
+    <div class="navitems container">
+        <ul>
+            <li>
+                <a href="/">主页</a>
+            </li>
+            <li class="space"></li>
+            <li>
+                <a href="/zone/all">宿舍信息</a>
+            </li>
+            <li class="space"></li>
+            <li>
+                <a href="/student/all">用户管理</a>
+            </li>
+            <li class="space"></li>
+            <li>
+                <a href="changeDorm.html">学生转宿</a>
+            </li>
+            <li class="space"></li>
+            <li>
+                <a href="studentPay.html">学生缴费</a>
+            </li>
+            <li class="space"></li>
+            <li>
+                <a href="rent.html">宿舍出租</a>
+            </li>
+            <li class="space"></li>
+            <li>
+                <a href="/visitor/all">辅助管理</a>
+            </li>
+            <li class="space"></li>
+            <li>
+                <a href="/login">登录</a>
+            </li>
+        </ul>
+    </div>
+</header>
+<div class="main">
+    <ul>
+        <li class="slidebar">
+            <div>
+                <ul>
+                    <li>
+                        <a href="zone.html">园区信息<span> > </span></a>
+                    </li>
+                    <li>
+                        <a href="dorm.html">寝室信息<span> > </span></a>
+                    </li>
+                </ul>
+            </div>
+        </li>
+        <!--    图表操作部分    -->
+        <li class="right">
+            <h5 th:text="${zno}">园区号</h5>
+            <h5 th:text="${dno}">寝室号</h5>
+
+            <div class="upperHalf">
+                <ul>
+                    <li class="box">
+                        <!--通过园区号查询-->
+                        <h4>通过园区号查询</h4>
+                        <form action="/dorm/list" method="get">
+                            <span>zno: </span><input class="textBox" type="text" name="zno"><br/>
+                            <input class="buttons" type="submit" value="查询">
+                        </form>
+                    </li>
+                    <li class="line"></li>
+                    <li class="box">
+                        <!--通过园区号和寝室号查询-->
+                        <h4>通过园区号和寝室号查询</h4>
+                        <form action="/dorm/one" method="get">
+                            <span>zno: </span><input class="textBox" type="text" name="zno"><br/>
+                            <span>dno: </span><input class="textBox" type="text" name="dno"><br/>
+                            <input class="buttons" type="submit" value="查询">
+                        </form>
+                    </li>
+                    <li class="line"></li>
+                    <li class="box">
+                        <!--插入一个寝室-->
+                        <h4>插入一个寝室</h4>
+                        <form action="/dorm/insert" method="get">
+                            <span>zno: </span><input class="textBox" type="text" name="zno"/><br/>
+                            <span>dno: </span><input class="textBox" type="text" name="dno"/><br/>
+                            <span>check_in: </span><input class="textBox" type="text" name="check_in"/><br/>
+                            <span>account:</span> <input class="textBox" type="text" name="account"/><br/>
+                            <input class="buttons" type="submit" value="添加"/>
+                        </form>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="lowerHalf">
+                <!--展示寝室列表-->
+                <h4>寝室列表</h4>
+                <table>
+                    <tr>
+                        <th>zno</th>
+                        <th>dno</th>
+                        <th>check_in</th>
+                        <th>account</th>
+                    </tr>
+                    <tr th:each="dorm:${dorms}">
+                        <td th:text="${dorm.zno}"></td>
+                        <td th:text="${dorm.dno}"></td>
+                        <td th:text="${dorm.check_in}"></td>
+                        <td th:text="${dorm.account}"></td>
+                    </tr>
+                </table>
+            </div>
+        </li>
+    </ul>
+</div>
+</body>
+</html>
